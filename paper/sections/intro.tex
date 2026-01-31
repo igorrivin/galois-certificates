@@ -1,0 +1,21 @@
+\section{Introduction}
+
+\subsection{Factoring, irreducibility, and Galois groups}
+The problems of factoring polynomials over $\mathbb{Q}$, testing irreducibility,
+and determining Galois groups are central in computational algebra and number theory.
+Deterministic algorithms are polynomial-time in theory but can be impractical at modest
+degrees; modular methods scale extremely well.
+
+\subsection{The Pemantle--Peres--Rivin subset-sum criterion}
+Given the factor degrees $(d_i)$ of $f\bmod p$, form the subset-sum set $S_p$ of all sums
+$\sum_{i\in I} d_i$. If $f$ has a rational factor of degree $d$, then $d\in S_p$ for all
+good primes. If the intersection over sampled primes contains no proper degrees, then $f$
+is irreducible.
+
+\subsection{Failure modes and arithmetic imprimitivity}
+Persistent subset-sum intersections often correlate with arithmetic imprimitivity, which
+we exploit as a fast structure flag.
+
+\subsection{Contributions and outline}
+We develop a hybrid Monte-Carlo irreducibility test, a Monte-Carlo imprimitivity detector
+producing explicit certificates, and a warm-start for factorization.

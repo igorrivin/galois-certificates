@@ -1,0 +1,13 @@
+\section{Algorithms and Complexity}
+
+\subsection{Standard Monte-Carlo irreducibility}
+Reduce $f$ modulo primes and stop when $f\bmod p$ is irreducible, certifying irreducibility over $\mathbb{Q}$.
+
+\subsection{The PPR-based irreducibility test}
+Intersect subset-sum sets $S_p$ across primes; under genericity assumptions the expected number of primes is $O(\log n)$ \cite{PPR2016}.
+
+\subsection{Hybrid algorithm}
+Run PPR for $O(\log n)$ primes; if inconclusive, fall back to the standard test.
+
+\subsection{Bit complexity and choice of primes}
+Modular factorization uses $\tilde O(n^2)$ field operations \cite{Berlekamp1970,CantorZassenhaus1981,vzGathenGerhard}; PPR permits using much smaller primes, reducing $\log p$ factors.

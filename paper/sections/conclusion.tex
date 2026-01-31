@@ -1,0 +1,51 @@
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+We have presented a collection of Monte-Carlo algorithms for irreducibility
+testing and structural analysis of polynomials over $\mathbb{Q}$ that are
+both theoretically motivated and practically effective in high degree.
+
+Our first contribution is an improved probabilistic irreducibility test,
+building on the subset-sum criterion of Pemantle--Peres--Rivin. For generic
+inputs, this method certifies irreducibility after examining only
+$O(\log n)$ primes, while aggregating information from all modular
+factorizations rather than discarding unsuccessful trials. When combined
+with the standard modular irreducibility test, this yields a Pareto-optimal
+algorithm that is never asymptotically worse than existing Monte-Carlo
+methods and is often significantly faster in practice.
+
+Our second contribution is the observation that failure of the subset-sum
+test, when irreducibility is nevertheless certified, is a strong indicator
+of non-generic algebraic structure. Exploiting this phenomenon, we give the
+first practical Monte-Carlo algorithm for detecting arithmetic imprimitivity
+of the Galois action of a polynomial over $\mathbb{Q}$. Unlike purely
+heuristic approaches based on modular statistics, our method produces
+explicit algebraic certificates in the imprimitive case, in the form of
+nontrivial subfields of the root field and corresponding relative equations.
+
+Third, we show that the subset-sum data produced by the irreducibility test
+can be reused to accelerate polynomial factorization. By sharply restricting
+the set of possible factor degrees, this information provides a warm start
+for classical lifting and recombination methods, reducing a significant
+source of combinatorial complexity without introducing new modular
+computations.
+
+Throughout the paper we emphasize that these algorithms are not merely of
+theoretical interest. They are practical, have been implemented, and have
+been successfully applied in degrees far beyond the reach of deterministic
+factorization and Galois group algorithms. The reliance on modular
+computation, small primes, and information aggregation makes the methods
+particularly well suited to large-scale and parallel computation.
+
+More broadly, our results illustrate a general principle: while local
+modular data can be highly informative when aggregated appropriately, it is
+insufficient on its own to certify global algebraic structure. In
+particular, fixing the factorization patterns of a polynomial modulo
+finitely many primes---or even fixing the reductions themselves---does not
+prevent the arithmetic Galois group from being generically as large as
+possible. Efficient certification therefore requires combining
+probabilistic heuristics with explicit field-theoretic constructions. We
+hope that the techniques developed here will be useful both as practical
+tools and as a framework for further algorithmic exploration of polynomial
+arithmetic.

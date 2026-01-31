@@ -1,0 +1,35 @@
+
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{hyperref}
+\usepackage{geometry}
+\geometry{margin=1in}
+\title{Monte-Carlo Irreducibility and Imprimitivity Detection of Polynomials over $\mathbb{Q}$}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We study fast Monte-Carlo methods for testing irreducibility and detecting arithmetic imprimitivity of polynomials over $\mathbb{Q}$.
+
+Building on the subset-sum criterion of Pemantle--Peres--Rivin, we develop a probabilistic irreducibility test whose expected running time, measured in the number of primes examined, is logarithmic in the degree for generic inputs. Unlike the standard modular irreducibility test, the method aggregates information from modular factorizations rather than discarding unsuccessful trials.
+
+We show that failure of this test, when combined with a standard modular irreducibility certificate, is a strong indicator of non-generic algebraic structure. In particular, it often signals arithmetic imprimitivity of the Galois action. We present an explicit and efficient Monte-Carlo algorithm for detecting such imprimitivity via subfield extraction, yielding constructive algebraic certificates in the imprimitive case. To our knowledge, this is the first practical algorithm for detecting arithmetic imprimitivity of polynomials over $\mathbb{Q}$ in high degree.
+
+We further show that the subset-sum data produced by the Pemantle--Peres--Rivin test provides a warm start for polynomial factorization by sharply restricting the possible degrees of rational factors, significantly accelerating subsequent lifting procedures.
+
+The proposed methods are orders of magnitude faster in practice than known deterministic algorithms, and are effective in degrees far beyond the reach of current deterministic techniques.
+\end{abstract}
+
+\input{sections/intro}
+\input{sections/algorithms}
+\input{sections/imprimitivity}
+\input{sections/warmstart}
+\input{sections/examples}
+\input{sections/appendix_engineering}
+\input{sections/conclusion}
+
+\bibliographystyle{plain}
+\bibliography{bibliography}
+\end{document}
